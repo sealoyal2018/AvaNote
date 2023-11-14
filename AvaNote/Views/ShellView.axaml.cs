@@ -7,5 +7,4 @@ public partial class ShellView : Window
     {
         InitializeComponent();
     }
-
 }

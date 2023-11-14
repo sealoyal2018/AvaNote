@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -24,6 +26,15 @@ public class ShellViewModel : Conductor<INavigateView> {
         {
             ActivateItem(e.AddedItems[0] as INavigateView);
         }
+    }
+
+    public void OpenSource()
+    {
+        Process.Start(new ProcessStartInfo()
+        {
+            FileName = "https://github.com/sealoyal2018/avanote",
+            UseShellExecute = true
+        });
     }
 
 }

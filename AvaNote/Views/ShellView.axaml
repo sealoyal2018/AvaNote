@@ -42,7 +42,7 @@
             Padding="16,10"
             BorderBrush="LightGray"
             BorderThickness="0,0,0,1">
-            <Grid ColumnDefinitions="50,*,100">
+            <Grid ColumnDefinitions="50,*,180">
                 <StackPanel Orientation="Horizontal" Spacing="8">
                     <Image Width="16" Source="/Assets/location.png" />
                     <TextBlock VerticalAlignment="Center" Text="和谐佳苑" />
@@ -54,7 +54,10 @@
                     Orientation="Horizontal"
                     Spacing="8">
                     <Image Width="16" Source="/Assets/avatar.png" />
-                    <TextBlock VerticalAlignment="Center" Text="用户名" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        PointerPressed="{s:Action OpenSource}"
+                        Text="用户名（查看源码）" />
                 </StackPanel>
             </Grid>
         </Border>
