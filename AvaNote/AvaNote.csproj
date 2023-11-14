@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\avatar.png" />
+    <None Remove="Assets\elevator.png" />
+    <None Remove="Assets\home.png" />
+    <None Remove="Assets\location.png" />
+    <None Remove="Assets\maintain.png" />
+    <None Remove="Assets\manage.png" />
+    <None Remove="Assets\menu.png" />
+    <None Remove="Assets\service.png" />
+    <None Remove="Assets\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\avatar.png" />
+    <AvaloniaResource Include="Assets\location.png" />
+    <AvaloniaResource Include="Assets\manage.png" />
+    <AvaloniaResource Include="Assets\home.png" />
+    <AvaloniaResource Include="Assets\menu.png" />
+    <AvaloniaResource Include="Assets\service.png" />
+    <AvaloniaResource Include="Assets\elevator.png" />
+    <AvaloniaResource Include="Assets\statistics.png" />
+    <AvaloniaResource Include="Assets\maintain.png" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2" />
+    <PackageReference Include="Stylet.Avalonia" Version="0.3.0" />
+  </ItemGroup>
+</Project>
